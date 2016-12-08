@@ -15,6 +15,7 @@ class GameViewController: UIViewController {
     
     // 0=Rock 1=Paper 2=Scissors
     var playerChoice = 0
+    var computerChoice = 0
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -50,6 +51,12 @@ class GameViewController: UIViewController {
         
         playerChoice = 2
         labelPlayerChoice.text = "Player 1 Chose: Scissors"
+    }
+    
+    @IBAction func playRound(_ sender: Any) {
+        
+        computerChoice = Int(arc4random_uniform(3))
+        print(computerChoice)
     }
     
 }
