@@ -11,6 +11,11 @@ import SpriteKit
 
 class GameViewController: UIViewController {
 
+    @IBOutlet weak var labelPlayerChoice: UILabel!
+    
+    // 0=Rock 1=Paper 2=Scissors
+    var playerChoice = 0
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         
@@ -29,4 +34,22 @@ class GameViewController: UIViewController {
     override var prefersStatusBarHidden: Bool {
         return true
     }
+    
+    
+    @IBAction func choseRock(_ sender: Any) {
+        playerChoice = 0
+        labelPlayerChoice.text = "Player 1 Chose: Rock"
+    }
+    
+    @IBAction func chosePaper(_ sender: Any) {
+        playerChoice = 1
+        labelPlayerChoice.text = "Player 1 Chose: Paper"
+    }
+    
+    @IBAction func choseScissors(_ sender: Any) {
+        
+        playerChoice = 2
+        labelPlayerChoice.text = "Player 1 Chose: Scissors"
+    }
+    
 }
