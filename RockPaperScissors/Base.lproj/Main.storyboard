@@ -1,26 +1,71 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="11134" systemVersion="15F34" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="BV1-FR-VrT">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="11542" systemVersion="15G1004" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="BV1-FR-VrT">
+    <device id="retina4_7" orientation="landscape">
+        <adaptation id="fullscreen"/>
+    </device>
     <dependencies>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="11106"/>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="11524"/>
+        <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
         <!--Game View Controller-->
         <scene sceneID="tXr-a1-R10">
             <objects>
-                <viewController id="BV1-FR-VrT" customClass="GameViewController" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController id="BV1-FR-VrT" customClass="GameViewController" customModule="RockPaperScissors" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="8aa-yV-Osq"/>
                         <viewControllerLayoutGuide type="bottom" id="qHh-Mt-9TT"/>
                     </layoutGuides>
                     <view key="view" multipleTouchEnabled="YES" contentMode="scaleToFill" id="3se-qz-xqx" customClass="SKView">
-                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <rect key="frame" x="0.0" y="0.0" width="667" height="375"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Xmc-KA-CUI">
+                                <rect key="frame" x="473" y="302" width="58" height="39"/>
+                                <fontDescription key="fontDescription" type="italicSystem" pointSize="22"/>
+                                <state key="normal" title="Paper">
+                                    <color key="titleColor" red="0.97669474095034436" green="1" blue="0.96118510700637572" alpha="1" colorSpace="calibratedRGB"/>
+                                </state>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="uag-HR-NZO">
+                                <rect key="frame" x="565" y="302" width="82" height="39"/>
+                                <fontDescription key="fontDescription" type="italicSystem" pointSize="22"/>
+                                <state key="normal" title="Scissors">
+                                    <color key="titleColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                                </state>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="xvY-ur-mL5">
+                                <rect key="frame" x="382" y="302" width="49" height="39"/>
+                                <fontDescription key="fontDescription" type="italicSystem" pointSize="22"/>
+                                <state key="normal" title="Rock">
+                                    <color key="titleColor" red="0.94638699716776065" green="1" blue="0.93567556056877521" alpha="1" colorSpace="calibratedRGB"/>
+                                </state>
+                            </button>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Streak:" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ORC-UN-o8i">
+                                <rect key="frame" x="27" y="312" width="68.5" height="27"/>
+                                <fontDescription key="fontDescription" type="italicSystem" pointSize="22"/>
+                                <color key="textColor" red="0.9410184011684346" green="1" blue="0.93810265766389023" alpha="1" colorSpace="calibratedRGB"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                        </subviews>
                         <color key="backgroundColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <constraints>
+                            <constraint firstAttribute="bottomMargin" secondItem="Xmc-KA-CUI" secondAttribute="bottom" constant="34" id="HQV-Cu-dxS"/>
+                            <constraint firstAttribute="bottomMargin" secondItem="xvY-ur-mL5" secondAttribute="bottom" constant="34" id="Oze-wd-eZo"/>
+                            <constraint firstItem="Xmc-KA-CUI" firstAttribute="trailing" secondItem="uag-HR-NZO" secondAttribute="trailing" constant="-116" id="X3h-mS-4VX"/>
+                            <constraint firstItem="ORC-UN-o8i" firstAttribute="leading" secondItem="3se-qz-xqx" secondAttribute="leading" constant="27" id="XyM-dG-9xk"/>
+                            <constraint firstItem="xvY-ur-mL5" firstAttribute="trailing" secondItem="Xmc-KA-CUI" secondAttribute="trailing" constant="-100" id="j5D-em-H4r"/>
+                            <constraint firstAttribute="bottomMargin" secondItem="ORC-UN-o8i" secondAttribute="bottom" constant="36" id="kuG-BG-Yfo"/>
+                            <constraint firstAttribute="trailing" secondItem="uag-HR-NZO" secondAttribute="trailing" constant="20" id="wQw-5J-VKk"/>
+                            <constraint firstAttribute="bottomMargin" secondItem="uag-HR-NZO" secondAttribute="bottom" constant="34" id="zso-GG-9gY"/>
+                        </constraints>
                     </view>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="SZV-WD-TEh" sceneMemberID="firstResponder"/>
             </objects>
+            <point key="canvasLocation" x="137.18140929535232" y="136.80000000000001"/>
         </scene>
     </scenes>
 </document>
