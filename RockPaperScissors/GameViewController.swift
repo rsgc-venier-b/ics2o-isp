@@ -9,6 +9,12 @@
 import UIKit
 import SpriteKit
 
+enum Choice : Int {
+    case rock
+    case paper
+    case scissors
+}
+
 class GameViewController: UIViewController {
 
     @IBOutlet weak var labelPlayerChoice: UILabel!
@@ -38,18 +44,18 @@ class GameViewController: UIViewController {
     
     
     @IBAction func choseRock(_ sender: Any) {
-        playerChoice = 0
+        playerChoice = Choice.rock.rawValue
         labelPlayerChoice.text = "Player 1 Chose: Rock"
     }
     
     @IBAction func chosePaper(_ sender: Any) {
-        playerChoice = 1
+        playerChoice = Choice.paper.rawValue
         labelPlayerChoice.text = "Player 1 Chose: Paper"
     }
     
     @IBAction func choseScissors(_ sender: Any) {
         
-        playerChoice = 2
+        playerChoice = Choice.scissors.rawValue
         labelPlayerChoice.text = "Player 1 Chose: Scissors"
     }
     
@@ -57,6 +63,21 @@ class GameViewController: UIViewController {
         
         computerChoice = Int(arc4random_uniform(3))
         print(computerChoice)
+        
+        // decide who won
+        if computerChoice == Choice.rock.rawValue {
+            
+            if playerChoice == Choice.rock.rawValue {
+                print("tie")
+            } else if playerChoice == Choice.scissors.rawValue {
+                print("Computer win, player loss")
+            } else {
+                print ("Computer loss, player win")
+            }
+            
+            
+        }
+        
     }
     
 }
