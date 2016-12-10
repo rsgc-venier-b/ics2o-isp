@@ -76,8 +76,29 @@ class GameViewController: UIViewController {
             }
             
             
+        } else if computerChoice == Choice.paper.rawValue {
+            
+            if playerChoice == Choice.paper.rawValue {
+                print("tie")
+            } else if playerChoice == Choice.rock.rawValue {
+                print("Computer win, player loss")
+            } else {
+                print("Computer loss, player win")
+            }
+            
+            
+            
+            
+        } else if computerChoice == Choice.scissors.rawValue {
+            
+            if playerChoice ==  Choice.scissors.rawValue {
+                print("tie")
+            } else if playerChoice == Choice.rock.rawValue {
+                print("Computer loss, player win")
+            } else {
+                print("Computer win, player loss")
+            }
         }
-        
     }
     
 }
