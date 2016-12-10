@@ -6,6 +6,7 @@
     <dependencies>
         <deployment identifier="iOS"/>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="11524"/>
+        <capability name="Aspect ratio constraints" minToolsVersion="5.1"/>
         <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
@@ -79,37 +80,43 @@
                                     <action selector="playRound:" destination="BV1-FR-VrT" eventType="touchUpInside" id="ggR-RU-Hm7"/>
                                 </connections>
                             </button>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="fP9-Oa-kVh">
-                                <rect key="frame" x="44" y="113" width="579" height="149"/>
-                                <color key="backgroundColor" white="0.66666666666666663" alpha="1" colorSpace="calibratedWhite"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="27"/>
-                                <color key="textColor" red="0.96667025773688697" green="1" blue="0.93245809711282157" alpha="1" colorSpace="calibratedRGB"/>
-                                <nil key="highlightedColor"/>
-                            </label>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="rock" translatesAutoresizingMaskIntoConstraints="NO" id="T8T-Yv-hex" userLabel="computerImage">
+                                <rect key="frame" x="44" y="104" width="166" height="166"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" secondItem="T8T-Yv-hex" secondAttribute="height" multiplier="1:1" id="cz1-df-EFa"/>
+                                </constraints>
+                            </imageView>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" image="rock" translatesAutoresizingMaskIntoConstraints="NO" id="6g4-Xq-3Cf" userLabel="playerImage">
+                                <rect key="frame" x="382" y="104" width="166" height="166"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" secondItem="6g4-Xq-3Cf" secondAttribute="height" multiplier="1:1" id="VhA-Vt-Mmp"/>
+                                </constraints>
+                            </imageView>
                         </subviews>
                         <color key="backgroundColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         <constraints>
                             <constraint firstItem="u0B-g3-pu3" firstAttribute="top" secondItem="8aa-yV-Osq" secondAttribute="bottom" id="3D4-Zh-qvz"/>
-                            <constraint firstAttribute="bottomMargin" secondItem="fP9-Oa-kVh" secondAttribute="bottom" constant="113" id="3dC-Ah-PHt"/>
+                            <constraint firstItem="6g4-Xq-3Cf" firstAttribute="top" secondItem="3se-qz-xqx" secondAttribute="topMargin" constant="104" id="5yn-AH-5cE"/>
                             <constraint firstAttribute="bottomMargin" secondItem="Xmc-KA-CUI" secondAttribute="bottom" constant="34" id="HQV-Cu-dxS"/>
-                            <constraint firstItem="fP9-Oa-kVh" firstAttribute="leading" secondItem="3se-qz-xqx" secondAttribute="leadingMargin" constant="24" id="ILv-xH-aLU"/>
+                            <constraint firstAttribute="bottomMargin" secondItem="T8T-Yv-hex" secondAttribute="bottom" constant="105" id="Iqq-aU-Sc3"/>
                             <constraint firstAttribute="bottomMargin" secondItem="xvY-ur-mL5" secondAttribute="bottom" constant="34" id="Oze-wd-eZo"/>
+                            <constraint firstItem="T8T-Yv-hex" firstAttribute="top" secondItem="3se-qz-xqx" secondAttribute="topMargin" constant="104" id="TNk-Ht-0a0"/>
                             <constraint firstItem="Xmc-KA-CUI" firstAttribute="trailing" secondItem="uag-HR-NZO" secondAttribute="trailing" constant="-116" id="X3h-mS-4VX"/>
                             <constraint firstItem="ORC-UN-o8i" firstAttribute="leading" secondItem="3se-qz-xqx" secondAttribute="leading" constant="27" id="XyM-dG-9xk"/>
-                            <constraint firstAttribute="trailingMargin" secondItem="fP9-Oa-kVh" secondAttribute="trailing" constant="24" id="iAc-um-yoU"/>
                             <constraint firstItem="xvY-ur-mL5" firstAttribute="trailing" secondItem="Xmc-KA-CUI" secondAttribute="trailing" constant="-100" id="j5D-em-H4r"/>
+                            <constraint firstAttribute="bottomMargin" secondItem="6g4-Xq-3Cf" secondAttribute="bottom" constant="105" id="jdL-0J-Kja"/>
                             <constraint firstAttribute="trailingMargin" secondItem="u0B-g3-pu3" secondAttribute="trailing" id="kqD-Ug-vlf"/>
                             <constraint firstAttribute="bottomMargin" secondItem="ORC-UN-o8i" secondAttribute="bottom" constant="36" id="kuG-BG-Yfo"/>
-                            <constraint firstItem="fP9-Oa-kVh" firstAttribute="top" secondItem="3se-qz-xqx" secondAttribute="topMargin" constant="113" id="lUa-Ha-Xaz"/>
+                            <constraint firstItem="T8T-Yv-hex" firstAttribute="leading" secondItem="3se-qz-xqx" secondAttribute="leadingMargin" constant="24" id="l54-cN-jpV"/>
                             <constraint firstItem="u0B-g3-pu3" firstAttribute="top" secondItem="3se-qz-xqx" secondAttribute="topMargin" constant="20" id="o8J-Io-wqr"/>
                             <constraint firstAttribute="trailing" secondItem="uag-HR-NZO" secondAttribute="trailing" constant="20" id="wQw-5J-VKk"/>
+                            <constraint firstAttribute="trailing" secondItem="6g4-Xq-3Cf" secondAttribute="trailing" constant="78" id="xnf-I5-oVj"/>
                             <constraint firstItem="u0B-g3-pu3" firstAttribute="leading" secondItem="xvY-ur-mL5" secondAttribute="leading" id="yWG-1x-Rtj"/>
                             <constraint firstAttribute="bottomMargin" secondItem="uag-HR-NZO" secondAttribute="bottom" constant="34" id="zso-GG-9gY"/>
                         </constraints>
                     </view>
                     <connections>
                         <outlet property="labelPlayerChoice" destination="u0B-g3-pu3" id="XGE-Fs-jRe"/>
-                        <outlet property="labelResults" destination="fP9-Oa-kVh" id="dvX-H3-K8P"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="SZV-WD-TEh" sceneMemberID="firstResponder"/>
@@ -117,4 +124,7 @@
             <point key="canvasLocation" x="137.18140929535232" y="136.80000000000001"/>
         </scene>
     </scenes>
+    <resources>
+        <image name="rock" width="600" height="600"/>
+    </resources>
 </document>
