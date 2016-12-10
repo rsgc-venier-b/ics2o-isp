@@ -79,17 +79,28 @@
                                     <action selector="playRound:" destination="BV1-FR-VrT" eventType="touchUpInside" id="ggR-RU-Hm7"/>
                                 </connections>
                             </button>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="fP9-Oa-kVh">
+                                <rect key="frame" x="44" y="113" width="579" height="149"/>
+                                <color key="backgroundColor" white="0.66666666666666663" alpha="1" colorSpace="calibratedWhite"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="27"/>
+                                <color key="textColor" red="0.96667025773688697" green="1" blue="0.93245809711282157" alpha="1" colorSpace="calibratedRGB"/>
+                                <nil key="highlightedColor"/>
+                            </label>
                         </subviews>
                         <color key="backgroundColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         <constraints>
                             <constraint firstItem="u0B-g3-pu3" firstAttribute="top" secondItem="8aa-yV-Osq" secondAttribute="bottom" id="3D4-Zh-qvz"/>
+                            <constraint firstAttribute="bottomMargin" secondItem="fP9-Oa-kVh" secondAttribute="bottom" constant="113" id="3dC-Ah-PHt"/>
                             <constraint firstAttribute="bottomMargin" secondItem="Xmc-KA-CUI" secondAttribute="bottom" constant="34" id="HQV-Cu-dxS"/>
+                            <constraint firstItem="fP9-Oa-kVh" firstAttribute="leading" secondItem="3se-qz-xqx" secondAttribute="leadingMargin" constant="24" id="ILv-xH-aLU"/>
                             <constraint firstAttribute="bottomMargin" secondItem="xvY-ur-mL5" secondAttribute="bottom" constant="34" id="Oze-wd-eZo"/>
                             <constraint firstItem="Xmc-KA-CUI" firstAttribute="trailing" secondItem="uag-HR-NZO" secondAttribute="trailing" constant="-116" id="X3h-mS-4VX"/>
                             <constraint firstItem="ORC-UN-o8i" firstAttribute="leading" secondItem="3se-qz-xqx" secondAttribute="leading" constant="27" id="XyM-dG-9xk"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="fP9-Oa-kVh" secondAttribute="trailing" constant="24" id="iAc-um-yoU"/>
                             <constraint firstItem="xvY-ur-mL5" firstAttribute="trailing" secondItem="Xmc-KA-CUI" secondAttribute="trailing" constant="-100" id="j5D-em-H4r"/>
                             <constraint firstAttribute="trailingMargin" secondItem="u0B-g3-pu3" secondAttribute="trailing" id="kqD-Ug-vlf"/>
                             <constraint firstAttribute="bottomMargin" secondItem="ORC-UN-o8i" secondAttribute="bottom" constant="36" id="kuG-BG-Yfo"/>
+                            <constraint firstItem="fP9-Oa-kVh" firstAttribute="top" secondItem="3se-qz-xqx" secondAttribute="topMargin" constant="113" id="lUa-Ha-Xaz"/>
                             <constraint firstItem="u0B-g3-pu3" firstAttribute="top" secondItem="3se-qz-xqx" secondAttribute="topMargin" constant="20" id="o8J-Io-wqr"/>
                             <constraint firstAttribute="trailing" secondItem="uag-HR-NZO" secondAttribute="trailing" constant="20" id="wQw-5J-VKk"/>
                             <constraint firstItem="u0B-g3-pu3" firstAttribute="leading" secondItem="xvY-ur-mL5" secondAttribute="leading" id="yWG-1x-Rtj"/>
@@ -98,6 +109,7 @@
                     </view>
                     <connections>
                         <outlet property="labelPlayerChoice" destination="u0B-g3-pu3" id="XGE-Fs-jRe"/>
+                        <outlet property="labelResults" destination="fP9-Oa-kVh" id="dvX-H3-K8P"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="SZV-WD-TEh" sceneMemberID="firstResponder"/>

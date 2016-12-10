@@ -18,6 +18,7 @@ enum Choice : Int {
 class GameViewController: UIViewController {
 
     @IBOutlet weak var labelPlayerChoice: UILabel!
+    @IBOutlet weak var labelResults: UILabel!
     
     // 0=Rock 1=Paper 2=Scissors
     var playerChoice = 0
@@ -69,10 +70,13 @@ class GameViewController: UIViewController {
             
             if playerChoice == Choice.rock.rawValue {
                 print("tie")
+                labelResults.text = "tie"
             } else if playerChoice == Choice.scissors.rawValue {
                 print("Computer win, player loss")
+                labelResults.text = "Computer win, player loss"
             } else {
                 print ("Computer loss, player win")
+                labelResults.text = "Computer loss, player win"
             }
             
             
@@ -80,23 +84,26 @@ class GameViewController: UIViewController {
             
             if playerChoice == Choice.paper.rawValue {
                 print("tie")
+                labelResults.text = "tie"
             } else if playerChoice == Choice.rock.rawValue {
                 print("Computer win, player loss")
+                labelResults.text = "Computer win, player loss"
             } else {
                 print("Computer loss, player win")
+                labelResults.text = "Computer loss, player win"
             }
-            
-            
-            
             
         } else if computerChoice == Choice.scissors.rawValue {
             
             if playerChoice ==  Choice.scissors.rawValue {
                 print("tie")
+                labelResults.text = "tie"
             } else if playerChoice == Choice.rock.rawValue {
                 print("Computer loss, player win")
+                labelResults.text = "Computer loss, player win"
             } else {
                 print("Computer win, player loss")
+                labelResults.text = "Computer win, player loss"
             }
         }
     }
