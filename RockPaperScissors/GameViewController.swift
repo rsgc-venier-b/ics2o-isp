@@ -80,6 +80,7 @@ class GameViewController: UIViewController {
             } else {
                 print ("Computer loss, player win")
             }
+             computerImage.image = UIImage(named: "rock")
             
             
         } else if computerChoice == Choice.paper.rawValue {
@@ -91,6 +92,8 @@ class GameViewController: UIViewController {
             } else {
                 print("Computer loss, player win")
             }
+            computerImage.image = UIImage(named: "paper")
+
             
         } else if computerChoice == Choice.scissors.rawValue {
             
@@ -101,6 +104,8 @@ class GameViewController: UIViewController {
             } else {
                 print("Computer win, player loss")
             }
+            computerImage.image = UIImage(named: "scissors")
+
         }
     }
     
