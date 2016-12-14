@@ -116,7 +116,9 @@
                         </constraints>
                     </view>
                     <connections>
+                        <outlet property="computerImage" destination="T8T-Yv-hex" id="WnZ-38-1Ih"/>
                         <outlet property="labelPlayerChoice" destination="u0B-g3-pu3" id="XGE-Fs-jRe"/>
+                        <outlet property="playerImage" destination="6g4-Xq-3Cf" id="yfi-Q1-QHK"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="SZV-WD-TEh" sceneMemberID="firstResponder"/>

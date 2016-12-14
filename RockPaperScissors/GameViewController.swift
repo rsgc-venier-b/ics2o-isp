@@ -18,7 +18,9 @@ enum Choice : Int {
 class GameViewController: UIViewController {
 
     @IBOutlet weak var labelPlayerChoice: UILabel!
-    @IBOutlet weak var labelResults: UILabel!
+    
+    @IBOutlet weak var computerImage: UIImageView!
+    @IBOutlet weak var playerImage: UIImageView!
     
     // 0=Rock 1=Paper 2=Scissors
     var playerChoice = 0
@@ -47,21 +49,20 @@ class GameViewController: UIViewController {
     @IBAction func choseRock(_ sender: Any) {
         playerChoice = Choice.rock.rawValue
         labelPlayerChoice.text = "Player 1 Chose: Rock"
-        let rock = SKSpriteNode(imageNamed: "rock")
-        rock.position = CGPoint(x: self.size.width/2, y: 200)
-        self.addChild(rock)
+        playerImage.image = UIImage(named: "rock")
     }
     
     @IBAction func chosePaper(_ sender: Any) {
         playerChoice = Choice.paper.rawValue
         labelPlayerChoice.text = "Player 1 Chose: Paper"
-        
+        playerImage.image = UIImage(named: "paper")
     }
     
     @IBAction func choseScissors(_ sender: Any) {
         
         playerChoice = Choice.scissors.rawValue
         labelPlayerChoice.text = "Player 1 Chose: Scissors"
+        playerImage.image = UIImage(named: "scissors")
     }
     
     @IBAction func playRound(_ sender: Any) {
