@@ -19,6 +19,8 @@ class GameViewController: UIViewController {
 
     @IBOutlet weak var labelPlayerChoice: UILabel!
     
+    @IBOutlet weak var labelResult: UILabel!
+    
     @IBOutlet weak var computerImage: UIImageView!
     @IBOutlet weak var playerImage: UIImageView!
     
@@ -75,10 +77,13 @@ class GameViewController: UIViewController {
             
             if playerChoice == Choice.rock.rawValue {
                 print("tie")
+            labelResult.text = "Tie Game"
             } else if playerChoice == Choice.scissors.rawValue {
                 print("Computer win, player loss")
+                labelResult.text = "You Lose :("
             } else {
                 print ("Computer loss, player win")
+                labelResult.text = "You Win! :)"
             }
              computerImage.image = UIImage(named: "rock")
             
@@ -87,10 +92,13 @@ class GameViewController: UIViewController {
             
             if playerChoice == Choice.paper.rawValue {
                 print("tie")
+                labelResult.text = "Tie Game"
             } else if playerChoice == Choice.rock.rawValue {
                 print("Computer win, player loss")
+                labelResult.text = "You Lose:("
             } else {
                 print("Computer loss, player win")
+                labelResult.text = "You Win! :)"
             }
             computerImage.image = UIImage(named: "paper")
 
@@ -99,10 +107,13 @@ class GameViewController: UIViewController {
             
             if playerChoice ==  Choice.scissors.rawValue {
                 print("tie")
+                labelResult.text = "Tie Game"
             } else if playerChoice == Choice.rock.rawValue {
                 print("Computer loss, player win")
+                labelResult.text = "You Win! :)"
             } else {
                 print("Computer win, player loss")
+                labelResult.text = "You Lose:("
             }
             computerImage.image = UIImage(named: "scissors")
 
