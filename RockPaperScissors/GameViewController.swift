@@ -51,20 +51,20 @@ class GameViewController: UIViewController {
     @IBAction func choseRock(_ sender: Any) {
         playerChoice = Choice.rock.rawValue
         labelPlayerChoice.text = "Player 1 Chose: Rock"
-        playerImage.image = UIImage(named: "rock")
+        playerImage.image = UIImage(named: "RockFlip")
     }
     
     @IBAction func chosePaper(_ sender: Any) {
         playerChoice = Choice.paper.rawValue
         labelPlayerChoice.text = "Player 1 Chose: Paper"
-        playerImage.image = UIImage(named: "paper")
+        playerImage.image = UIImage(named: "PaperFlip")
     }
     
     @IBAction func choseScissors(_ sender: Any) {
         
         playerChoice = Choice.scissors.rawValue
         labelPlayerChoice.text = "Player 1 Chose: Scissors"
-        playerImage.image = UIImage(named: "scissors")
+        playerImage.image = UIImage(named: "ScissorsFlip")
     }
     
     @IBAction func playRound(_ sender: Any) {
