@@ -24,9 +24,15 @@ class GameViewController: UIViewController {
     @IBOutlet weak var computerImage: UIImageView!
     @IBOutlet weak var playerImage: UIImageView!
     
+    @IBOutlet weak var labelComputerWins: UILabel!
+    @IBOutlet weak var labelPlayerWins: UILabel!
+    
+    
     // 0=Rock 1=Paper 2=Scissors
     var playerChoice = 0
     var computerChoice = 0
+    var playerWins = 0
+    var computerWins = 0
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -81,9 +87,13 @@ class GameViewController: UIViewController {
             } else if playerChoice == Choice.scissors.rawValue {
                 print("Computer win, player loss")
                 labelResult.text = "You Lose :("
+                computerWins += 1
+                labelComputerWins.text = String(computerWins)
             } else {
                 print ("Computer loss, player win")
                 labelResult.text = "You Win! :)"
+                playerWins += 1
+                labelPlayerWins.text = String(playerWins)
             }
              computerImage.image = UIImage(named: "rock")
             
@@ -95,10 +105,14 @@ class GameViewController: UIViewController {
                 labelResult.text = "Tie Game"
             } else if playerChoice == Choice.rock.rawValue {
                 print("Computer win, player loss")
+                computerWins += 1
+                labelComputerWins.text = String(computerWins)
                 labelResult.text = "You Lose:("
             } else {
                 print("Computer loss, player win")
                 labelResult.text = "You Win! :)"
+                playerWins += 1
+                labelPlayerWins.text = String(playerWins)
             }
             computerImage.image = UIImage(named: "paper")
 
@@ -110,14 +124,18 @@ class GameViewController: UIViewController {
                 labelResult.text = "Tie Game"
             } else if playerChoice == Choice.rock.rawValue {
                 print("Computer loss, player win")
+                playerWins += 1
+                labelPlayerWins.text = String(playerWins)
                 labelResult.text = "You Win! :)"
             } else {
                 print("Computer win, player loss")
+                computerWins += 1
+                labelComputerWins.text = String(computerWins)
                 labelResult.text = "You Lose:("
             }
             computerImage.image = UIImage(named: "scissors")
 
         }
+        
     }
-    
 }
