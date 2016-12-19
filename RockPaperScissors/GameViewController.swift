@@ -138,4 +138,12 @@ class GameViewController: UIViewController {
         }
         
     }
+    
+    
+    @IBAction func resetGame(_ sender: Any) {
+        labelComputerWins.text = "Computer Wins: 0"
+        labelPlayerWins.text = "Player Wins: 0"
+        labelResult.text = "Result:"
+        labelPlayerChoice.text = "Player 1 Chose:"
+    }
 }
