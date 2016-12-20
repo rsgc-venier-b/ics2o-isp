@@ -141,6 +141,8 @@ class GameViewController: UIViewController {
     
     
     @IBAction func resetGame(_ sender: Any) {
+        computerWins = 0
+        playerWins = 0
         labelComputerWins.text = "Computer Wins: 0"
         labelPlayerWins.text = "Player Wins: 0"
         labelResult.text = "Result:"
