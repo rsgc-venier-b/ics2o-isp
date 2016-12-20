@@ -145,5 +145,7 @@ class GameViewController: UIViewController {
         labelPlayerWins.text = "Player Wins: 0"
         labelResult.text = "Result:"
         labelPlayerChoice.text = "Player 1 Chose:"
+        playerImage.image = UIImage(named: "RockFlip")
+        computerImage.image = UIImage(named: "rock")
     }
 }
