@@ -17,6 +17,8 @@ enum Choice : Int {
 
 class GameViewController: UIViewController {
 
+    // Outlets for labels and images
+    
     @IBOutlet weak var labelPlayerChoice: UILabel!
     
     @IBOutlet weak var labelResult: UILabel!
@@ -29,6 +31,7 @@ class GameViewController: UIViewController {
     
     
     // 0=Rock 1=Paper 2=Scissors
+    
     var playerChoice = 0
     var computerChoice = 0
     var playerWins = 0
@@ -53,6 +56,7 @@ class GameViewController: UIViewController {
         return true
     }
     
+    // What happens when Rocl, Paper, Scissors buttons are pressed
     
     @IBAction func choseRock(_ sender: Any) {
         playerChoice = Choice.rock.rawValue
@@ -72,6 +76,8 @@ class GameViewController: UIViewController {
         labelPlayerChoice.text = "Player 1 Chose: Scissors"
         playerImage.image = UIImage(named: "ScissorsFlip")
     }
+    
+    // Everything that happens when go is clicked
     
     @IBAction func playRound(_ sender: Any) {
         
@@ -139,6 +145,7 @@ class GameViewController: UIViewController {
         
     }
     
+    // Resets game
     
     @IBAction func resetGame(_ sender: Any) {
         computerWins = 0
